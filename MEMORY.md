@@ -2,9 +2,9 @@
 title: MEMORY.md
 type: system-core
 description: 记忆索引——指向 memory/ 目录下详细记忆文件的压缩索引。约 2200 字符上限。
-version: 3.0
+version: 4.0
 created: 2026-05-31
-updated: 2026-08-17
+updated: 2026-10-02
 ---
 
 # MEMORY.md
@@ -95,4 +95,4 @@ updated: 2026-08-17
 
 ---
 
-*MyPS v3.0 · 2026-08-17*
+*MyPS v4.0 · 2026-10-02*

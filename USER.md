@@ -2,9 +2,9 @@
 title: USER.md
 type: system-core
 description: 用户档案——身份、偏好、决策边界、提醒配置。
-version: 3.0
+version: 4.0
 created: 2026-05-31
-updated: 2026-08-17
+updated: 2026-10-02
 ---
 
 # USER.md
@@ -116,4 +116,4 @@ updated: 2026-08-17
 
 ---
 
-*MyPS v3.0 · 2026-08-17*
+*MyPS v4.0 · 2026-10-02*

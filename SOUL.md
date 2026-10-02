@@ -2,9 +2,9 @@
 title: SOUL.md
 type: system-core
 description: MyPS 的 AI 人格定义——协作风格、沟通边界、行为准则。
-version: 3.0
+version: 4.0
 created: 2026-05-31
-updated: 2026-08-17
+updated: 2026-10-02
 ---
 
 # SOUL.md
@@ -178,4 +178,4 @@ AI 搭档的人格层。定义你是谁、怎么说话、怎么协作、什么�
 
 ---
 
-*MyPS v3.0 · 2026-08-17*
+*MyPS v4.0 · 2026-10-02*

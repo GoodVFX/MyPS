@@ -2,9 +2,9 @@
 title: AGENTS.md
 type: system-core
 description: 工作空间说明书——目录结构、数据格式、操作约定、敏感规则。
-version: 3.0
+version: 4.0
 created: 2026-05-31
-updated: 2026-08-17
+updated: 2026-10-02
 ---
 
 # AGENTS.md
@@ -281,4 +281,4 @@ tags: [标签列表]
 
 ---
 
-*MyPS v3.0 · 2026-08-17*
+*MyPS v4.0 · 2026-10-02*

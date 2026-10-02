@@ -2,9 +2,9 @@
 title: README.md
 type: project-readme
 description: MyPS 个人 AI 助理系统——项目总览、目录结构、快速上手。
-version: 3.0
+version: 4.0
 created: 2026-05-31
-updated: 2026-08-17
+updated: 2026-10-02
 ---
 
 # MyPS — 你的个人 AI 助理
@@ -24,6 +24,21 @@ MyPS（My Personal Secretary）是一个运行在 Hermes Agent 之上的个人 A
 - **学习辅助**：你口述的知识碎片按主题积累，到量了主动提议帮你整理
 - **长项目陪伴**：跨周/跨月的长期项目持续跟踪，记住愿景，温和推动进展
 - **自愈运行**：Gateway 进程挂了自动拉起，断电重启后自动恢复（见 `docs/gateway-watchdog.md`）
+
+---
+
+## v4.0 更新说明
+
+v4.0 聚焦**记忆生命周期**与**自愈能力**的升级。相比 v3.0，核心变化：
+
+| 变化 | v3.0 | v4.0 |
+|------|------|------|
+| 记忆维护 | 水位满了提醒用户手动清理 | **每晚自主 consolidation**——水位 ≥86% 当晚自动整理（快照回滚锚点 + 三个月判据 + 事实无损硬约束），用户只看结果 |
+| 记忆固化 | 惊奇度扫描提议写入 | + **固化提案（reflect 闭环）**——每晚自问「新会话的我该记住什么」，用户回复「固化」即写入，三个月判据准入 |
+| 成长回放 | 无 | **journey 月度机制**——每月 1 日自动生成上月成长档案（技能沉淀/记忆演化/里程碑/待办完成/本月叙事），水位趋势日志联动 |
+| 技能体系 | 11 个 SKILL.md | 16 个——新增豆包 TTS 接入、SSL 证书续期、LLM 成本分析、模型 A/B 选型评测、AI 编码工具链 |
+| 微信自愈 | Gateway 进程 watchdog | + **wx-fix 一键恢复脚本**——微信被其他客户端顶掉后，扫码即自动恢复（含凭据更新与 gateway 重启全流程） |
+| 辅助文档 | gateway-watchdog.md | + `docs/memory-consolidation-journey.md`（记忆 consolidation 与成长回放机制完整手册） |
 
 ---
 
@@ -51,7 +66,8 @@ MyPS/
 ├── README.md                  ← 你正在看的文件
 ├── INSTALL.md                 ← 安装步骤指导（从零开始）
 ├── docs/
-│   └── gateway-watchdog.md    ← Gateway 进程自愈守护方案（v3.0 辅助文档）
+│   ├── gateway-watchdog.md    ← Gateway 进程自愈守护方案（v3.0 辅助文档）
+│   └── memory-consolidation-journey.md ← 记忆整理与成长回放机制（v4.0 辅助文档）
 │
 ├── SOUL.md                    ← AI 的人格——它是什么样的搭档、怎么和你说话
 ├── USER.md                    ← 你的档案——你是谁、怎么沟通、什么能自动做什么不行
@@ -88,7 +104,14 @@ MyPS/
 │   ├── 扩展技能（3 个，v3.0 新增）
 │   ├── data-backup/           ← 数据备份——git 增量备份到 GitHub 私有仓库
 │   ├── project-coach/         ← 长项目陪伴——愿景对齐、进度推动
-│   └── myps-operations/       ← 系统运维——Cron/Skill 对应、故障排查、恢复
+│   └── myps-operations/       ← 系统运维——Cron/Skill 对应、故障排查、恢复、wx-fix 微信自愈
+│   │
+│   ├── 扩展技能（5 个，v4.0 新增）
+│   ├── doubao-tts/            ← 豆包语音合成接入——鉴权、音色选型、流解析
+│   ├── ssl-cert-renewal/      ← SSL 证书续期——到期盯梢、部署验证
+│   ├── tools/llm-cost-analysis/       ← LLM 成本分析与模型选型
+│   ├── tools/model-selection-eval/    ← 模型 A/B 选型评测
+│   └── tools/ai-coding-tools/         ← AI 编码工具链管理
 │   │
 │   └── 类级协议（2 个，场景化行为定义）
 │       ├── interaction/interaction-protocols/   ← 场景化交互协议（连接测试、工具学习等）
@@ -126,7 +149,7 @@ MyPS 的定位是**「外脑记事本」**，不是知识管理系统。核心�
 | 洞察 | 模式、偏好、情绪趋势 | MEMORY.md 索引 → memory/ |
 | 隐记忆 | 所有历史对话 | SessionDB（Hermes 原生） |
 
-技能按需加载：核心 6 个各司其职，扩展 3 个覆盖备份/项目/运维，类级 2 个定义特殊场景行为。
+技能按需加载：核心 6 个各司其职，扩展 8 个覆盖备份/项目/运维/语音/证书/成本分析/模型评测/工具链，类级 2 个定义特殊场景行为。
 
 完整设计方案见项目根目录下的 `sheji.md`。
 
@@ -147,4 +170,4 @@ Memory Work 由 [@yiliqi78](https://github.com/yiliqi78) 创建，首创了分�
 
 ---
 
-*MyPS v3.0 · 2026-08-17*
+*MyPS v4.0 · 2026-10-02*

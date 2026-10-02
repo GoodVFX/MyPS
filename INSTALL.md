@@ -2,9 +2,9 @@
 title: INSTALL.md
 type: installation-guide
 description: MyPS 在纯净 Hermes Agent 环境下的完整安装步骤指导。
-version: 3.0
+version: 4.0
 created: 2026-05-31
-updated: 2026-08-17
+updated: 2026-10-02
 ---
 
 # 安装指导
@@ -391,4 +391,4 @@ Memory Work 由 [@yiliqi78](https://github.com/yiliqi78) 创建，首创了分�
 
 ---
 
-*MyPS v3.0 · 2026-08-17*
+*MyPS v4.0 · 2026-10-02*
